@@ -5,10 +5,8 @@
       require('includes/head.php'); |
     ?> |
   
-  = variable = "home"
-  
   %body
-    %h1 HAML Template : #{variable}
+    %h1 HAML Template
     <?php |
-      require('functions/write-dir.php'); |
+       require('functions/read-posts.php'); |
     ?> |

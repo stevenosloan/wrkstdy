@@ -1,7 +1,5 @@
 <?php
   
-  echo 'Start Directory';
-  
   // open directory
   $directory = opendir("pages");
   
@@ -15,16 +13,19 @@
   
   // count files
   $file_count = count( $file_array );
-  echo '<h2>' . $file_count . ' files</h2>';
   
   for( $i = 0; $i < $file_count; $i++ ){
   
-    $file = $file_array[$i];
-  
+    $file = 'pages/' . $file_array[$i];
+    $post_json = file_get_contents( $file, 0, null, null );
+    
+    $post = json_decode( $post_json );
     if( substr("$file_array[$i]", 0, 1) != "."){
-      echo '<li>';
-        echo '<a href="'.$file.'">'.$file.'</a>';
-      echo '</li>';
+      echo '<article>';
+        echo '<h1>'. $post->title . '</h1>';
+        echo '<h2>'. $post->subtitle . '</h2>';
+        echo $post->body;
+      echo '</article>';
     }
   }
   

@@ -3,9 +3,8 @@
   <head>
     <?php require('includes/head.php'); ?> 
   </head>
-  home
   <body>
-    <h1>HAML Template : home</h1>
-    <?php require('functions/write-dir.php'); ?> 
+    <h1>HAML Template</h1>
+    <?php require('functions/read-posts.php'); ?> 
   </body>
 </html>

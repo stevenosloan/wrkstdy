@@ -1,0 +1,5 @@
+{
+    "title":"another post",
+    "subtitle":"pulled from json",
+    "body":"<p>This is a paragraph with <strong>strong language</strong> and such - like an ampersand &amp; a <a href=\"#\">link</a></p>"
+}
