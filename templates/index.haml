@@ -3,10 +3,11 @@
   %head
     <?php |
       require('includes/head.php'); |
+      require('functions/read-posts.php'); |
     ?> |
   
   %body
     %h1 HAML Template
     <?php |
-       require('functions/read-posts.php'); |
+       list_posts( "pages" ); |
     ?> |
