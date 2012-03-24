@@ -1,0 +1,14 @@
+!!! 5
+%html
+  %head
+    <?php |
+      require('includes/head.php'); |
+    ?> |
+  
+  = variable = "home"
+  
+  %body
+    %h1 HAML Template : #{variable}
+    <?php |
+      require('functions/write-dir.php'); |
+    ?> |
