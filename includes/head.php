@@ -1,6 +1,6 @@
 <meta charset="UTF-8" />
       
-    <title>Insert Title Here</title>
+    <title><?php echo $title; ?></title>
     
     <link rel="stylesheet" href="css/main<?php echo '.' . filemtime('css/main.css'); ?>.css" />
     <link rel="icon" href="assets/images/favicon<?php echo '.' . filemtime('assets/images/favicon.png'); ?>.png" type="image/png" />

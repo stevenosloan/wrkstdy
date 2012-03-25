@@ -1,6 +1,35 @@
 <?php
   
-  function list_posts( $folder ){
+  function list_posts( $post_array ){
+  
+    $post_count = count( $post_array );
+    
+    echo 'post count: '. $post_count;
+    
+    if( $post_count > 0 ){
+      echo '<ul>';
+      
+        for( $i = 0; $i < $post_count; $i++ ){
+          
+          $self = $post_array[$i];
+          
+          echo '<li>';
+            
+            echo '<h1>' . $self->title . '</h1>';
+            echo '<h2>' . $self->subtitle . '</h2>';
+            echo $self->body;
+            
+          echo '</li>';
+          
+        }
+    
+      echo '</ul>';
+    
+    }
+    
+  }
+  
+  function get_posts( $folder ){
   
     // open directory
     $directory = opendir( $folder );
@@ -18,19 +47,20 @@
     
     for( $i = 0; $i < $file_count; $i++ ){
     
-      $file = 'pages/' . $file_array[$i];
-      $post_json = file_get_contents( $file, 0, null, null );
+      $file = $folder . '/' . $file_array[$i];
       
-      $post = json_decode( $post_json );
       if( substr("$file_array[$i]", 0, 1) != "."){
-        echo '<article>';
-          echo '<h1>'. $post->title . '</h1>';
-          echo '<h2>'. $post->subtitle . '</h2>';
-          echo $post->body;
-        echo '</article>';
+        $post_json = file_get_contents( $file, 0, null, null );
+        $post = json_decode( $post_json );
+        $posts[] = $post;
       }
+       
     }
-  
+    
+    echo 'file count: ' . $file_count;
+    
+    return $posts;
+    
   }
   
 ?>
