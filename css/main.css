@@ -1,69 +1,155 @@
 @charset "UTF-8";
-
 /**** resets ****/
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
 
-	/* http://meyerweb.com/eric/tools/css/reset/ */
-	/* v1.0 | 20080212 */
-	
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-		margin: 0;
-		padding: 0;
-		border: 0;
-		outline: 0;
-		font-size: 100%;
-		vertical-align: baseline;
-		background: transparent;
-		}
-		
-	body {
-		line-height: 1;
-		}
-		
-	ol, ul {
-		list-style: none;
-		}
-		
-	a{
-		text-decoration:none;
-		}
-		
-	blockquote, q {
-		quotes: none;
-		}
-		
-	blockquote:before, blockquote:after,
-	q:before, q:after {
-		content: '';
-		content: none;
-		}
-	
-	/* remember to define focus styles! */
-	:focus {
-		outline: 0;
-		}
-	
-	/* remember to highlight inserts somehow! */
-	ins {
-		text-decoration: none;
-		}
-		
-	del {
-		text-decoration: line-through;
-		}
-	
-	/* tables still need 'cellspacing="0"' in the markup */
-	table {
-		border-collapse: collapse;
-		border-spacing: 0;
-		}
-		
-		
-	article,aside,details,figcaption,figure, footer,header,hgroup,menu,nav,section { 
-    	display:block;
-		}
-	
-	.clear{
-		clear:both;
-		}
-	
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0; }
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+.clear {
+  clear: both; }
+
 /**** end resets ****/
+body {
+  background: url("../assets/images/background.png");
+  font-family: georgia, "times new roman", times, sans-serif; }
+
+#wrapper {
+  width: 1006px;
+  margin: 0 auto; }
+  #wrapper > header {
+    width: 308px;
+    float: left; }
+    #wrapper > header h1 {
+      font-family: "helvetica neue", arial, helvetica, sans-serif;
+      padding-top: 28px;
+      color: #cccccc;
+      font-size: 36px;
+      position: relative; }
+      #wrapper > header h1:before {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 88px;
+        height: 8px;
+        background: #cccccc;
+        content: ''; }
+    #wrapper > header p {
+      font-size: 16px;
+      line-height: 135%;
+      color: #999;
+      margin-top: .5em; }
+      #wrapper > header p a {
+        color: #777;
+        -o-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -webkit-transition: all 0.3s linear;
+        transition: all 0.3s linear; }
+        #wrapper > header p a:hover {
+          color: #666;
+          background: #EFE8BC;
+          padding: 0px 2px;
+          margin: 0px -2px; }
+  #wrapper #content {
+    width: 638px;
+    padding: 20px;
+    margin: 20px 0 20px 20px;
+    float: left;
+    background: #f6f6f6; }
+    #wrapper #content .post {
+      margin-bottom: 64px; }
+      #wrapper #content .post header hgroup {
+        margin-bottom: 20px; }
+        #wrapper #content .post header hgroup h1 {
+          font-family: "helvetica neue", arial, helvetica, sans-serif;
+          text-transform: uppercase;
+          font-size: 24px;
+          color: #444444; }
+        #wrapper #content .post header hgroup h2 {
+          font-family: "helvetica neue", arial, helvetica, sans-serif;
+          font-size: 14px;
+          color: #666666;
+          font-weight: normal;
+          text-transform: uppercase;
+          margin-top: .25em; }
+      #wrapper #content .post p {
+        font-size: 18px;
+        line-height: 150%;
+        color: #666666; }
+        #wrapper #content .post p + p {
+          margin-top: 20px; }
+        #wrapper #content .post p strong {
+          font-weight: normal;
+          color: #444444;
+          font-style: italic; }
+        #wrapper #content .post p a {
+          color: #666666;
+          -o-transition: all 0.3s linear;
+          -moz-transition: all 0.3s linear;
+          -webkit-transition: all 0.3s linear;
+          transition: all 0.3s linear; }
+          #wrapper #content .post p a:hover {
+            color: #666;
+            background: #EFE8BC;
+            padding: 0px 2px;
+            margin: 0px -2px; }
+  #wrapper > footer {
+    width: 308px;
+    float: left;
+    padding-bottom: 20px; }
+    #wrapper > footer p {
+      padding-top: 20px;
+      font-size: 12px;
+      color: #999999;
+      position: relative; }
+      #wrapper > footer p:before {
+        display: block;
+        width: 88px;
+        height: 8px;
+        background: #cccccc;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0; }

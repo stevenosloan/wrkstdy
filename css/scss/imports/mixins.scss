@@ -1,3 +1,13 @@
+$helvetica : 'helvetica neue', arial, helvetica, sans-serif;
+$georgia : georgia, 'times new roman', times, sans-serif;
+$courier : 'courier new', courier, monaco, monospace;
+
+$light-grey : #ccc;
+$grey : #999;
+$text : #666;
+$dark : #444;
+$black : #121212;
+
 @mixin transition( $type: all, $time: .3s, $easing: linear) {  
   -o-transition: $type $time $easing;
   -moz-transition: $type $time $easing;

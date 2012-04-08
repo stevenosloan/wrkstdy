@@ -57,8 +57,6 @@
        
     }
     
-    echo 'file count: ' . $file_count;
-    
     return $posts;
     
   }
